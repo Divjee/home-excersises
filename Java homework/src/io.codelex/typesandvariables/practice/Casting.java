@@ -1,0 +1,36 @@
+package io.codelex.typesandvariables.practice;
+
+import static java.lang.Integer.parseInt;
+
+public class Casting {
+    public static void main(String[] args) {
+        first();
+        second();
+    }
+
+
+
+    private static void first() {
+        String a = "1";
+        int b = 2;
+        int c = 3;
+        int d = 4;
+        int e = 5;
+
+        //fixme - should be 15 :|
+        int sum = parseInt(a) + b + c + d + e;
+        System.out.println(sum);
+    }
+
+    private static void second() {
+        String a = "1";
+        int b = 2;
+        int c = 3;
+        float d = 4.2f;
+        float e = 5.3f;
+
+        //fixme - should be 15.5 :| 
+        double sum =parseInt(a) + b + c + d + e;
+        System.out.println(sum);
+    }
+}
