@@ -11,9 +11,9 @@ public class Exercise6 {
         System.out.println("Enter your numbers");
         long numbers = input.nextLong();
 
-        while(numbers > 0){
-           sum = sum + (numbers % 10);
-           numbers = numbers /10;
+        while (numbers > 0) {
+            sum = sum + (numbers % 10);
+            numbers = numbers / 10;
 
         }
         System.out.println(sum);

@@ -16,6 +16,6 @@ public class Exercise7 {
                 upper++;
             }
         }
-            System.out.println(upper);
+        System.out.println(upper);
     }
 }

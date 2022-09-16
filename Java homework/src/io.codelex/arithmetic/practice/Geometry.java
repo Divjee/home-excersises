@@ -5,12 +5,12 @@ import io.codelex.NoCodeWrittenException;
 import java.math.BigDecimal;
 
 class Geometry {
-    static BigDecimal areaOfCircle(BigDecimal radius){
+    static BigDecimal areaOfCircle(BigDecimal radius) {
 
         return radius.multiply(radius).multiply(BigDecimal.valueOf(Math.PI));
     }
 
-    static BigDecimal areaOfRectangle(BigDecimal length, BigDecimal width){
+    static BigDecimal areaOfRectangle(BigDecimal length, BigDecimal width) {
 
         return length.multiply(width);
     }
