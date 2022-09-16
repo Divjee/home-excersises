@@ -12,21 +12,21 @@ public class Exercise5 {
 
             {
                 put("English  III", "Ms. Lapan");
-                put("Precalculus" , "Mrs. Gideon");
-                put("Music Theory" , "Mr. Davis");
+                put("Precalculus", "Mrs. Gideon");
+                put("Music Theory", "Mr. Davis");
                 put("Biotechnology", "Ms. Palmer");
                 put("Principles of Technology I", "Ms. Garcia");
-                put("Latin II","Mrs. Barnett");
+                put("Latin II", "Mrs. Barnett");
                 put("AP US History", "Ms. Johannessen");
                 put("Business Computer Infomation Systems", "Mr. James");
-        }
-    };
+            }
+        };
 
 
         System.out.format("+------------------------------------------------------------+%n");
         int columnNr = 1;
-        for (String key: classSchedule.keySet()) {
-            System.out.format(leftAlignFormat, columnNr,key,classSchedule.get(key));
+        for (String key : classSchedule.keySet()) {
+            System.out.format(leftAlignFormat, columnNr, key, classSchedule.get(key));
             columnNr++;
         }
         System.out.format("+------------------------------------------------------------+%n");

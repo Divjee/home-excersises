@@ -5,20 +5,20 @@ public class Exercise6 {
         int i = 1;
 
         while (i <= 110) {
-            boolean test = false;
+            boolean isAmultiple = false;
             if (i % 3 == 0) {
                 System.out.print("coza");
-                test = true;
+                isAmultiple = true;
             }
             if (i % 5 == 0) {
                 System.out.print("loza");
-                test = true;
+                isAmultiple = true;
             }
             if (i % 7 == 0) {
                 System.out.print("woza");
-                test = true;
+                isAmultiple = true;
             }
-            if (!test) {
+            if (!isAmultiple) {
                 System.out.print(i);
             }
             System.out.print(" ");

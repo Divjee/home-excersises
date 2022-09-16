@@ -9,7 +9,6 @@ public class Casting {
     }
 
 
-
     private static void first() {
         String a = "1";
         int b = 2;
@@ -30,7 +29,7 @@ public class Casting {
         float e = 5.3f;
 
         //fixme - should be 15.5 :| 
-        double sum =parseInt(a) + b + c + d + e;
+        double sum = parseInt(a) + b + c + d + e;
         System.out.println(sum);
     }
 }

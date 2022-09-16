@@ -5,11 +5,12 @@ public class Exercise4 {
 
         int lowerBound = 1;
         int upperBound = 10;
+        int product = lowerBound;
+        for (int i = lowerBound; i <= upperBound; i++) {
+            product *= i;
 
-        for(int i = lowerBound; i <= upperBound ; i++){
-            lowerBound *= i;
         }
-        System.out.println(lowerBound);
+        System.out.println(product);
 
     }
 }
