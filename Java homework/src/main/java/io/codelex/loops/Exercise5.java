@@ -13,17 +13,18 @@ public class Exercise5 {
         String secondWord = input.nextLine();
 
         String dot = ".";
+        int lineLength = 30;
 
         int i = 0;
         String combined = firstWord + secondWord;
-        if(combined.length() < 30) {
+        if (combined.length() < lineLength) {
 
-            while (combined.length() < 30) {
+            while (combined.length() < lineLength) {
                 combined = firstWord + (dot.repeat(i)) + secondWord;
                 i++;
             }
             System.out.println(combined);
-        }else{
+        } else {
             System.out.println("Combined word length can't be more or equal to 30");
         }
     }

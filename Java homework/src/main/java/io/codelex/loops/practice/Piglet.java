@@ -11,12 +11,12 @@ public class Piglet {
         Scanner input = new Scanner(System.in);
         int yourScore = 0;
         System.out.println("Welcome to PIGLET!");
-        while(1 != 0){
+        while (1 != 0) {
             int dice = diceRoll();
 
-            System.out.printf("You rolled a %d .\n",dice);
+            System.out.printf("You rolled a %d .\n", dice);
 
-            if(dice == 1){
+            if (dice == 1) {
                 System.out.println("You got 0 points!");
                 break;
             }
@@ -24,16 +24,14 @@ public class Piglet {
 
             System.out.println("Roll again? (Yes/No)");
             char yourChoice = input.next().charAt(0);
-            if(Character.toLowerCase(yourChoice) == 'n'){
+            if (Character.toLowerCase(yourChoice) == 'n') {
                 System.out.printf("You got %d points! \n", yourScore);
                 break;
             }
         }
-
     }
 
-
-    public static int diceRoll() {
+    private static int diceRoll() {
         Random randomNum = new Random();
         return randomNum.nextInt(6) + 1;
     }

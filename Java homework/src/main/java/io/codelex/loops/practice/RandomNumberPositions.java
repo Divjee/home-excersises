@@ -7,38 +7,33 @@ import static org.apache.commons.lang3.RandomUtils.nextInt;
 public class RandomNumberPositions {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Integer[] integers = randomIntegers(20);
+        int randomLimit = 20;
+        Integer[] integers = randomIntegers(randomLimit);
+        int i = 0;
+        boolean foundIt = false;
         System.out.println("There are few integers given: " + Arrays.toString(integers));
         System.out.println("Which number index would you like to find?");
-
         int searchFor = scanner.nextInt();
-        int i = 0;
 
-        boolean foundIt = false;
-
-        for (i = 1 ; i < integers.length ; i++) {
-            if(searchFor == integers[i]){
+        for (i = 1; i < integers.length; i++) {
+            if (searchFor == integers[i]) {
                 foundIt = true;
                 break;
             }
-
-            }if (foundIt) {
+        }
+        if (foundIt) {
             System.out.println("Found " + searchFor + " at index " + i);
         } else {
             System.out.println(searchFor + " is not in the array");
         }
-        }
-
+    }
 
 
     private static Integer[] randomIntegers(int n) {
-       List<Integer> list = new ArrayList<>(n);
-
+        List<Integer> list = new ArrayList<>(n);
         for (int i = 0; i < n; i++) {
             list.add(nextInt(0, 99));
         }
         return list.toArray(new Integer[0]);
     }
-
-
 }
