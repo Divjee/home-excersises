@@ -5,20 +5,15 @@ import java.util.Scanner;
 public class MultiplyByItself {
 
     public static void main(String[] args) {
-        int i, n;
 
         System.out.print("Input number of terms : ");
         Scanner in = new Scanner(System.in);
-        n = in.nextInt();
+        int n = in.nextInt();
 
-
-        //todo - complete loop to multiply i with itself n times, it is NOT allowed to use Math.pow()
         int multiplier;
-        for (i = 1; i <= n ; i++) {
+        for (int i = 1; i <= n; i++) {
             multiplier = i * n;
-          System.out.println(multiplier);
+            System.out.println(multiplier);
         }
-
     }
-
 }

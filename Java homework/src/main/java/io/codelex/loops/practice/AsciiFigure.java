@@ -6,7 +6,7 @@ public class AsciiFigure {
 
     }
 
-    public static void pattern(int n){
+    private static void pattern(int n){
         int nMinus = n -1;
         int lines = nMinus * 2;
         int starCount = 8;
@@ -22,7 +22,6 @@ public class AsciiFigure {
             for (int j = 1; j <= lines ; j++) {
                 System.out.print("\\\\");
             }
-
             System.out.println();
             lines -=2;
         }
