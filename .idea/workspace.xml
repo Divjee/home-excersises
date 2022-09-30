@@ -1,43 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5a5d36ce-b6e9-4d02-8d0d-ced7c4e64d79" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/NoCodeWrittenException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/Preconditions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/arrays/examples/ArrayExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/arrays/examples/ArrayInlineExample.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/arrays/examples/Quiz1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/arrays/examples/Quiz2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/arrays/examples/TwoDimensionalArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/arrays/practice/Exercise1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/arrays/practice/Exercise2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/arrays/practice/Exercise3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/arrays/practice/Exercise4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/arrays/practice/Exercise5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/arrays/practice/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/arrays/practice/tictac/TicTacToe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/classesandobjects/examples/Babies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/classesandobjects/examples/Baby.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/classesandobjects/examples/StaticBabies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/classesandobjects/examples/StaticBaby.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/classesandobjects/examples/StaticMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/classesandobjects/examples/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/classesandobjects/examples/VariableHiding.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/classesandobjects/practice/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/classesandobjects/practice/BankAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/classesandobjects/practice/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/classesandobjects/practice/fuelgage/energy/EnergyDrinks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/src/io/codelex/classesandobjects/practice/videostore/VideoStoreTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thirdhw/thirdhw.iml" afterDir="false" />
-    </list>
+    <list default="true" id="5a5d36ce-b6e9-4d02-8d0d-ced7c4e64d79" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +23,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Salix/Documents/home-excersises/home-excersises/thirdhw",
+    "last_opened_file_path": "C:/Users/Salix/Documents/home-excersises/home-excersises",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
@@ -100,6 +64,7 @@
       <workItem from="1663415738315" duration="1474000" />
       <workItem from="1663684008080" duration="27000" />
       <workItem from="1663684053369" duration="41000" />
+      <workItem from="1664286477156" duration="21000" />
     </task>
     <servers />
   </component>
