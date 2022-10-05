@@ -35,12 +35,12 @@ public class SavingAcc {
 
             money.addInterest(annualInterestRate);
 
-            interestEarned += money.lastInterest;
+            interestEarned += money.getLastInterest();
         }
 
-        System.out.println("Balance is: " + money.balance);
-        System.out.println("Total amount of deposit: " + money.totalDeposit);
-        System.out.println("Total amount of withdrwal: " + money.totalWithdrawal);
+        System.out.println("Balance is: " + money.getBalance());
+        System.out.println("Total amount of deposit: " + money.getTotalDeposit());
+        System.out.println("Total amount of withdrwal: " + money.getTotalWithdrawal());
         System.out.println("Total interest earned: " + interestEarned);
     }
 }

@@ -25,17 +25,10 @@ public class Car {
     }
 
     boolean gasHog() {
-        if (calculateConsumption() >= 15) {
-            return true;
-        } else
-            return false;
-    }
+        return calculateConsumption() >= 15;
+        }
 
     boolean economyCar() {
-        if (calculateConsumption() < 5) {
-            System.out.println("Greta is happy");
-            return true;
-        } else
-            return false;
+        return calculateConsumption() < 5;
     }
 }

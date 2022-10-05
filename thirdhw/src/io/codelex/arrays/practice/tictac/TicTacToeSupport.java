@@ -2,11 +2,11 @@ package io.codelex.arrays.practice.tictac;
 
 import java.util.Scanner;
 
-public class TicTacToe1 {
+public class TicTacToeSupport {
     private static char[][] board = new char[3][3];
 
 
-    public static void player1(char[][] board, Scanner in, char symbol) {
+    protected static void player1(char[][] board, Scanner in, char symbol) {
         String yourInput;
         while (true) {
             System.out.println("Player 1 turn");
@@ -50,7 +50,7 @@ public class TicTacToe1 {
         }
     }
 
-    public static void player2(char[][] board, Scanner in, char symbol) {
+    protected static void player2(char[][] board, Scanner in, char symbol) {
         String yourInput;
         while (true) {
             System.out.println("Player 2 turn");
@@ -95,7 +95,7 @@ public class TicTacToe1 {
         }
     }
 
-    public static boolean isValidMove(char[][] board, String position) {
+    protected static boolean isValidMove(char[][] board, String position) {
         switch (position) {
             case "00":
                 if (board[0][0] == ' ') {
@@ -156,7 +156,7 @@ public class TicTacToe1 {
         }
     }
 
-    public static boolean hasWon(char[][] board, char symbol) {
+    protected static boolean hasWon(char[][] board, char symbol) {
 
         if (board[0][0] == symbol && board[0][1] == symbol && board[0][2] == symbol ||
                 board[1][0] == symbol && board[1][1] == symbol && board[1][2] == symbol ||
@@ -174,7 +174,7 @@ public class TicTacToe1 {
         }
     }
 
-    public static boolean isGameFinished(char[][] board) {
+    protected static boolean isGameFinished(char[][] board) {
         for (int r = 0; r < board.length; r++) {
             for (int c = 0; c < board[r].length; c++) {
                 if (board[r][c] == ' ') {

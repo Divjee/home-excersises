@@ -4,12 +4,12 @@ import io.codelex.classesandobjects.practice.fuelgage.FuelGauge;
 
 public class Odometer {
 
-    double carMaxMileage = 999999;
+    private final double carMaxMileage = 999999;
 
-    double carCurrentMileage;
-    double kmPerLiter = 10;
-    double startingKm;
-    FuelGauge fuelGauge;
+    private double carCurrentMileage;
+    private final double kmPerLiter = 10;
+    private  double startingKm;
+    private FuelGauge fuelGauge;
 
     public Odometer(double carCurrentMileage, FuelGauge fuelGauge) {
         this.carCurrentMileage = carCurrentMileage;

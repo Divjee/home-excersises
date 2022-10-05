@@ -28,14 +28,15 @@ public class Dog {
                 '}';
     }
 
-    public String hasFathersName() {
+    protected String hasFathersName() {
         if (father == null) {
             return "UNKNOWN";
-        } else
+        } else {
             return father;
+        }
     }
 
-    public boolean hasSameMother(Dog otherDog) {
+    protected boolean hasSameMother(Dog otherDog) {
         if (mother.equals(otherDog.mother)) {
             System.out.println("Has same mother");
             return true;

@@ -1,6 +1,4 @@
-package io.codelex.classesandobjects.practice.Datee;
-
-import io.codelex.classesandobjects.practice.Datee.Datee;
+package io.codelex.classesandobjects.practice.Dates;
 
 import java.util.Scanner;
 
@@ -8,7 +6,7 @@ public class DateTime {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        Datee birthYear = new Datee();
+        Date birthYear = new Date();
 
         System.out.println("Choose a day");
         int day = in.nextInt();

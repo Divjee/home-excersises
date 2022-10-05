@@ -35,8 +35,7 @@ public class LitersPerKilometer {
         if (car.gasHog()) {
             System.out.println("Greta hates your car");
         } else if (car.economyCar()) {
+            System.out.println("Greta is happy");
         }
-
     }
 }
-

@@ -13,9 +13,9 @@ public class ExerciseProduct {
         Car2.setName("GTR");
         Car3.setAmountAtStart(7);
 
-        System.out.println(Car2.name);
-        System.out.println(Car1.priceAtStart);
-        System.out.println(Car3.amountAtStart);
+        System.out.println(Car2.getName());
+        System.out.println(Car1.getPriceAtStart());
+        System.out.println(Car3.getAmountAtStart());
     }
 }
 

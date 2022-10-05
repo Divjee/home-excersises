@@ -2,15 +2,14 @@ package io.codelex.classesandobjects.practice.fuelgage;
 
 public class FuelGauge {
 
-    double maxLiters = 70;
-    double currentLiters;
+    private double maxLiters = 70;
+    private double currentLiters;
 
    public FuelGauge(){}
     public FuelGauge(double currentLiters) {
-        maxLiters = currentLiters;
+        this.maxLiters = currentLiters;
 
     }
-
     public double getCurrentLiters() {
         return currentLiters;
     }
@@ -25,5 +24,8 @@ public class FuelGauge {
         if (currentLiters > 0) {
             currentLiters--;
         }
+    }
+    public double getMaxLiters() {
+        return maxLiters;
     }
 }

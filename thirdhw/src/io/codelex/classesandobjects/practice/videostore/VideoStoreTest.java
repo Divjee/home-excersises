@@ -6,9 +6,9 @@ public class VideoStoreTest {
     private static final int COUNT_OF_MOVIES = 3;
 
     public static void main(String[] args) {
-        final Scanner keyboard = new Scanner(System.in);
+        Scanner keyboard = new Scanner(System.in);
 
-
+        VideoStore store = new VideoStore();
 
         while (true) {
             System.out.println("Choose the operation you want to perform ");
@@ -23,13 +23,13 @@ public class VideoStoreTest {
                 case 0:
                     System.exit(0);
                 case 1:
-                    fillVideoStore(keyboard);
+                    fillVideoStore(keyboard, store);
                     break;
                 case 2:
-                    rentVideo(keyboard);
+                    rentVideo(store);
                     break;
                 case 3:
-                    returnVideo(keyboard);
+                    returnVideo(keyboard, store);
                     break;
                 default:
                     break;
@@ -38,21 +38,68 @@ public class VideoStoreTest {
         }
     }
 
-    private static void fillVideoStore(Scanner scanner) {
+    private static void fillVideoStore(Scanner scanner, VideoStore inv) {
         for (int i = 0; i < COUNT_OF_MOVIES; i++) {
             System.out.println("Enter movie name");
-            String movieName = scanner.next();
-            System.out.println("Enter rating");
-            int rating = scanner.nextInt();
-            //todo - add video
+            scanner.nextLine();
+            String movieName = scanner.nextLine();
+            inv.addNewVideo(movieName);
+            System.out.println("Enter rating 1 (1-5)");
+            double rating = scanner.nextDouble();
+            inv.inventory.get(i).setAverageUserRating(rating);
+            System.out.println("Enter rating 2 (1-5)");
+            rating = scanner.nextDouble();
+            inv.inventory.get(i).setAverageUserRating(rating);
+            System.out.println("Enter rating 3 (1-5)");
+            rating = scanner.nextDouble();
+            inv.inventory.get(i).setAverageUserRating(rating);
         }
     }
 
-    private static void rentVideo(Scanner scanner) {
-        //todo - rent video
+    private static void rentVideo(VideoStore video) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Pick a video you want to rent out");
+        String movieName = scanner.nextLine();
+        if (movieName.equals("Matrix") && !video.isRentedOut(movieName)) {
+            video.rentOut(movieName);
+            video.getRatingPercentage(movieName);
+        } else if (movieName.equals("Godfather") && !video.isRentedOut(movieName)) {
+            video.rentOut(movieName);
+            video.getRatingPercentage(movieName);
+            System.out.println();
+            video.listInventory();
+        } else if (movieName.equals("Star Wars") && !video.isRentedOut(movieName)) {
+            video.rentOut(movieName);
+            video.getRatingPercentage(movieName);
+        } else if (video.isRentedOut(movieName)) {
+            System.out.println("Movie has been already rented out");
+        }
+
     }
 
-    private static void returnVideo(Scanner scanner) {
-        //todo - return video
+    private static void returnVideo(Scanner scanner, VideoStore video) {
+        Scanner scanner1 = new Scanner(System.in);
+        System.out.println("What is the movie you will be returning");
+        String movieName = scanner1.nextLine();
+        double userRating;
+        if (movieName.equals("Matrix") && video.isRentedOut(movieName)) {
+            video.returnVideo(movieName);
+            System.out.println("What would you rate the video (1-5)");
+            userRating = scanner1.nextDouble();
+            video.inventory.get(video.findByTitle(movieName)).setAverageUserRating(userRating);
+        } else if (movieName.equals("Godfather") && video.isRentedOut(movieName)) {
+            video.returnVideo(movieName);
+            System.out.println("What would you rate the video (1-5)");
+            userRating = scanner1.nextDouble();
+            video.inventory.get(video.findByTitle(movieName)).setAverageUserRating(userRating);
+            video.listInventory();
+        } else if (movieName.equals("Star Wars") && video.isRentedOut(movieName)) {
+            System.out.println("What would you rate the video (1-5)");
+            userRating = scanner1.nextDouble();
+            video.inventory.get(video.findByTitle(movieName)).setAverageUserRating(userRating);
+            video.returnVideo(movieName);
+        } else if (!video.isRentedOut(movieName)) {
+            System.out.println("Movie has been already been given back");
+        }
     }
 }

@@ -1,36 +1,34 @@
 package io.codelex.classesandobjects.practice.movies;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Movie {
-    protected String title;
-    protected String studio;
-    protected String rating;
+    public static void main(String[] args) {
 
-    public Movie() {
+        MovieSupport movie1 = new MovieSupport("CASINO ROYALE", "EON PRODUCTIONS", "PG");
+        MovieSupport movie2 = new MovieSupport("DORA THE EXPLORER", "NIKOLODEAN", "PG");
+        MovieSupport movie3 = new MovieSupport("SCARFACE", "WARNER BROS", "PG13");
+        MovieSupport movie4 = new MovieSupport("AVATAR", "WARNER BROS", "PG");
+
+        List<MovieSupport> cinema = new ArrayList<>();
+        cinema.add(movie1);
+        cinema.add(movie2);
+        cinema.add(movie3);
+        cinema.add(movie4);
+
+        getPgMovies(cinema);
     }
-
-    public Movie(String title, String studio, String rating) {
-        this.title = title;
-        this.studio = studio;
-        this.rating = rating;
-    }
-
-
-    public Movie(String title, String studio) {
-        this.title = title;
-        this.studio = studio;
-        rating = "PG";
-    }
-
-    public Movie[] getPg(Movie[] cinema) {
-        Movie[] cinema2 = new Movie[4];
-        int counter = 0;
-        for (int i = 0; i < cinema.length; i++) {
-            if (cinema[i].rating.equals("PG")) {
-                cinema2[counter] = cinema[i];
-                System.out.println(cinema2[counter].title + " " + cinema2[counter].studio+ " "+  cinema[counter].rating);
+    private static void getPgMovies(List<MovieSupport> cinema) {
+        for (int i = 0; i < cinema.size(); i++) {
+            if (cinema.get(i).getRating().equals("PG")) {
+                System.out.println(cinema.get(i));
             }
-            counter++;
         }
-        return cinema2;
     }
 }
+
+
+
+
+

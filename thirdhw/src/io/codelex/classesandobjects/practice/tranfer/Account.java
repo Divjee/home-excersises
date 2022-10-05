@@ -9,11 +9,11 @@ public class Account {
         this.owner = owner;
     }
 
-    public void deposit(double amount) {
+    protected void deposit(double amount) {
         balance += amount;
     }
 
-    public void withdrawal(double amount) {
+    protected void withdrawal(double amount) {
         balance -= amount;
     }
 

@@ -1,15 +1,15 @@
-package io.codelex.classesandobjects.practice.Datee;
+package io.codelex.classesandobjects.practice.Dates;
 
-public class Datee {
-    int day;
-    int month;
-    int year;
+public class Date {
+    private int day;
+    private int month;
+    private int year;
 
 
-    public Datee() {
+    public Date() {
     }
 
-    public Datee(int day, int month, int year) {
+    public Date(int day, int month, int year) {
         this.day = day;
         this.month = month;
         this.year = year;

@@ -8,7 +8,7 @@ public class Exercise6 {
 
         Random random = new Random();
         int[] firstArray = new int[10];
-
+        int lastArrNumber = 9;
         for (int i = 0; i < firstArray.length; i++) {
             firstArray[i] = random.nextInt(100) + 1;
         }
@@ -17,7 +17,7 @@ public class Exercise6 {
         for (int i = 0; i < firstArray.length; i++) {
             copyOfFirstArr[i] = firstArray[i];
         }
-        firstArray[9] = -7;
+        firstArray[lastArrNumber] = -7;
         System.out.println(Arrays.toString(firstArray));
 
         System.out.println(Arrays.toString(copyOfFirstArr));

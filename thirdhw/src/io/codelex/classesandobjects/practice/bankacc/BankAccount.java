@@ -4,10 +4,9 @@ package io.codelex.classesandobjects.practice.bankacc;
 // information including name and balance of money.
 
 public class BankAccount {
-    public String name;
-    public double balance;
+    private String name;
+    private double balance;
 
-    double totalAmount;
 
 
     public BankAccount(String name) {
@@ -25,6 +24,10 @@ public class BankAccount {
 
     public final void withdraw(double amount) {
          balance -=  amount;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     @Override
