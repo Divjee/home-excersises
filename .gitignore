@@ -22,4 +22,10 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+<<<<<<< HEAD
 */out/
+=======
+# file: ~/.gitignore_global
+.DS_Store
+.idea
+>>>>>>> 8c02901 (git ignore edited)
