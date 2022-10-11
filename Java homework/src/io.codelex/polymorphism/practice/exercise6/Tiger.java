@@ -1,5 +1,7 @@
 package io.codelex.polymorphism.practice.exercise6;
 
+import java.text.DecimalFormat;
+
 public class Tiger extends Feline{
     public Tiger(String animalName, String animalTyp, Double animalWeight, Integer foodEaten, String livingRegion) {
         super(animalName, animalTyp, animalWeight, foodEaten, livingRegion);
@@ -34,6 +36,7 @@ public class Tiger extends Feline{
 
     @Override
     public String toString() {
-        return "Tiger["+ getAnimalTyp() +", "+getAnimalWeight()+ ", "+ getLivingRegion()+", food eaten: "+getFoodEaten()+"]";
+        DecimalFormat df = new DecimalFormat("###.#");
+        return "Tiger["+ getAnimalTyp() +", "+df.format(getAnimalWeight())+ ", "+ getLivingRegion()+", food eaten: "+getFoodEaten()+"]";
     }
 }

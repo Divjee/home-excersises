@@ -1,5 +1,7 @@
 package io.codelex.polymorphism.practice.exercise6;
 
+import java.text.DecimalFormat;
+
 public class Mouse extends Mammal{
     public Mouse(String animalName, String animalTyp, Double animalWeight, Integer foodEaten, String livingRegion) {
         super(animalName, animalTyp, animalWeight, foodEaten, livingRegion);
@@ -26,6 +28,7 @@ public class Mouse extends Mammal{
 
     @Override
     public String toString() {
-        return "Mouse["+ getAnimalTyp() +", "+getAnimalWeight()+ ", "+ getLivingRegion()+", food eaten: "+getFoodEaten()+"]";
+        DecimalFormat df = new DecimalFormat("###.#");
+        return "Mouse["+ getAnimalTyp() +", "+df.format(getAnimalWeight())+ ", "+ getLivingRegion()+", food eaten: "+getFoodEaten()+"]";
     }
 }

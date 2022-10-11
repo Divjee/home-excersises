@@ -1,5 +1,7 @@
 package io.codelex.polymorphism.practice.exercise6;
 
+import java.text.DecimalFormat;
+
 public abstract class Mammal extends Animal{
 
    String livingRegion;
@@ -22,6 +24,7 @@ public abstract class Mammal extends Animal{
     }
 
     public String aboutAnimal(){
-        return getAnimalName() + " " + getAnimalTyp() + " "+ getAnimalWeight()+ " "+ getLivingRegion();
+        DecimalFormat df = new DecimalFormat("###.#");
+        return getAnimalName() + " " + getAnimalTyp() + " "+ df.format(getAnimalWeight())+ " "+ getLivingRegion();
     }
 }
