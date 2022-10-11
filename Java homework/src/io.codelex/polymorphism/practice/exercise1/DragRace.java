@@ -1,5 +1,8 @@
 package io.codelex.polymorphism.practice.exercise1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Take a look at the cars in this package.
  * 1. Extract common behaviour to an interface called Car, and use it in the all classes.
@@ -17,63 +20,63 @@ public class DragRace {
         Lexus lexus = new Lexus();
         Audi audi = new Audi();
         Tesla tesla = new Tesla();
+        Zurka zurka = new Zurka();
+        Zigulis zigulis = new Zigulis();
+        Car car = null;
+
+        List<Car> cars = new ArrayList<>();
+        cars.add(bmwe46);
+        cars.add(lexus);
+        cars.add(tesla);
+        cars.add(zurka);
+        cars.add(zigulis);
+        cars.add(audi);
 
         for (int i = 3; i > 0; i--) {
             System.out.println("Race is about to begin in: " + i);
-            Thread.sleep(2000);
+            Thread.sleep(1000);
             if (i == 1) {
                 System.out.println("\t\t\tGO!");
             }
         }
-        Thread.sleep(2000);
-        bmwe46.startEngine();
-        lexus.startEngine();
-        audi.startEngine();
-        tesla.startEngine();
 
-        System.out.println();
-
-        int lap = 1;
-        for (int i = 0; i <= 3; i++) {
-            System.out.println("\n lap: " + lap + "\n");
-            bmwe46.speedUp();
-            System.out.println(bmwe46.showCurrentSpeed());
-            lexus.speedUp();
-            System.out.println(lexus.showCurrentSpeed());
-            audi.speedUp();
-            System.out.println(audi.showCurrentSpeed());
-            tesla.speedUp();
-            System.out.println(tesla.showCurrentSpeed());
-            Thread.sleep(2000);
-            if (i == 2) {
-                bmwe46.slowDown();
-                lexus.slowDown();
-                audi.slowDown();
-                tesla.slowDown();
-            } else if (i == 3) {
-                bmwe46.useNitrousOxideEngine();
-                System.out.println("\nBMW used Nitro: " + bmwe46.showCurrentSpeed());
-                lexus.useNitrousOxideEngine();
-                System.out.println("Lexus used Nitro: " + lexus.showCurrentSpeed());
-                System.out.println(audi.showCurrentSpeed());
-                System.out.println(tesla.showCurrentSpeed());
-                if (bmwe46.getCurrentSpeed() > lexus.getCurrentSpeed() && bmwe46.getCurrentSpeed() > audi.getCurrentSpeed() && bmwe46.getCurrentSpeed() > tesla.getCurrentSpeed()) {
-                    System.out.println("BMW WON THE RACE!!");
-                } else if (lexus.getCurrentSpeed() > bmwe46.getCurrentSpeed() && lexus.getCurrentSpeed() > audi.getCurrentSpeed() && lexus.getCurrentSpeed() > tesla.getCurrentSpeed()) {
-                    System.out.println("TESLA WON THE RACE!!");
-                } else if (audi.getCurrentSpeed() > bmwe46.getCurrentSpeed() && audi.getCurrentSpeed() > lexus.getCurrentSpeed() && audi.getCurrentSpeed() > tesla.getCurrentSpeed()) {
-                    System.out.println("AUDI WON THE RACE!!");
-                } else {
-                    System.out.println("TESLA WON THE RACE");
+        int maxSpeed = 0;
+        for (int i = 0; i < cars.size(); i++) {
+            cars.get(i).startEngine();
+            Thread.sleep(1000);
+            for (int j = 0; j < 10; j++) {
+                cars.get(i).speedUp();
+                if (j == 2 || j == 6) {
+                    System.out.println("Sharp Turn!! Slow down");
+                    cars.get(i).slowDown();
+                    cars.get(i).slowDown();
+                }
+                if (j == 3 && cars.get(i).equals(bmwe46)) {
+                    bmwe46.useNitrousOxideEngine();
+                } else if (j == 3 && cars.get(i).equals(lexus)) {
+                    lexus.useNitrousOxideEngine();
+                }
+                System.out.println(cars.get(i).showCurrentSpeed());
+                Thread.sleep(150);
+                if (j == 9 && cars.get(i).equals(tesla)) {
+                    tesla.batteryDied();
+                    System.out.println(cars.get(i).showCurrentSpeed());
+                } else if (j == 9 && cars.get(i).equals(zurka)) {
+                    zurka.brokeDown();
+                    System.out.println(cars.get(i).showCurrentSpeed());
                 }
             }
-
-            System.out.println();
-            lap++;
-
+            if (cars.get(i).getCurrentSpeed() > maxSpeed) {
+                maxSpeed = cars.get(i).getCurrentSpeed();
+                car = cars.get(i);
+            }
+            if (i == cars.size() - 1) {
+                System.out.println(car.getClass().getSimpleName().toUpperCase() + " WAS THE FASTEST!!");
+            }
         }
     }
 }
+
 
 
 

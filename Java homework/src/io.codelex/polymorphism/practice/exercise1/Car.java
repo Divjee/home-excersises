@@ -6,6 +6,5 @@ public interface Car {
 
     public String showCurrentSpeed();
     public void startEngine();
-
-
+    public Integer getCurrentSpeed();
 }

@@ -19,6 +19,11 @@ public class Tesla implements Car {
         System.out.println("-- Tesla goes psssssssssss ---");
     }
 
+    public void batteryDied(){
+        currentSpeed = 0;
+        System.out.println("Teslas battery died");
+    }
+
     public Integer getCurrentSpeed() {
         return currentSpeed;
     }
