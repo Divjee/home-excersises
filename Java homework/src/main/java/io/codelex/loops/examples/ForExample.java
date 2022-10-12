@@ -1,4 +1,4 @@
-package main.java.io.codelex.loops.examples;
+package io.codelex.loops.examples;
 
 public class ForExample {
 
