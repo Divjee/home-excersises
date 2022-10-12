@@ -1,7 +1,5 @@
 package io.codelex.arithmetic.practice;
 
-import io.codelex.NoCodeWrittenException;
-
 public class Exercise1 {
     public static void main(String[] args) {
         System.out.println(fifteen(3, 4));

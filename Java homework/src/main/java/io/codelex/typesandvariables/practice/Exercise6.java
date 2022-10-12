@@ -1,6 +1,5 @@
 package main.java.io.codelex.typesandvariables.practice;
 
-import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Exercise6 {
