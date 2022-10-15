@@ -1,9 +1,15 @@
 import io.codelex.questions.exercise2.Basket;
 import io.codelex.questions.exercise2.BasketEmptyException;
 import io.codelex.questions.exercise2.BasketFullException;
-import io.codelex.questions.exercise3.Joiner;
+import io.codelex.questions.exercise5.Exercise5;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.Arrays;
+import java.util.List;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class JavaAdvanced {
 
@@ -26,10 +32,12 @@ class JavaAdvanced {
         }
     }
 
+
     @Test
-    void checkIfJoins(){
-        Joiner join = new Joiner("-");
-        assertEquals("Hello-Bye-4141-23-45-",join.joinThem("Hello","Bye", 4141, 23,45));
+    void checkThePercentage(){
+        List<String> list = Arrays.asList("Hello","you","Have","his","they","she");
+        double percentage = Exercise5.partOf(list,(a)-> a.contains("h")||a.contains("H"));
+        assertThat(percentage, equalTo((double)5/6));
     }
 
 

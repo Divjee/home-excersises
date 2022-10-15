@@ -26,7 +26,7 @@ public class BasketApp {
         mushroomBasket.addItems(mushroom);
         mushroomBasket.addItems(mushroom);
         mushroomBasket.addItems(mushroom);
-       mushroomBasket.removeItems(mushroom);
+        mushroomBasket.removeItems(mushroom);
 
     }
 }

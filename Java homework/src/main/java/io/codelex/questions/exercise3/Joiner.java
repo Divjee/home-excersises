@@ -1,11 +1,11 @@
 package io.codelex.questions.exercise3;
 
+import java.util.Arrays;
+
 public class Joiner<T> {
 
 
-
     String seperator;
-    String result = "";
 
 
     public Joiner(String seperator) {
@@ -13,11 +13,8 @@ public class Joiner<T> {
         this.seperator = seperator;
     }
 
-    public String joinThem(T... itemOne) {
-        for (Object i : itemOne) {
-            result = result + i.toString() + seperator;
-        }
-        return result;
-
+    @SafeVarargs
+    public final String joinThem(T... itemOne) {
+        return Arrays.stream(itemOne).map(T::toString).reduce((a, b) -> a + seperator + b).get();
     }
 }

@@ -1,8 +1,8 @@
 package io.codelex.questions.exercise1;
 
-import io.codelex.questions.exercise1.BankCards;
+import java.math.BigDecimal;
 
-public class DebitCard extends BankCards {
+public class DebitCard extends Cards {
 
 
     public DebitCard(int number, String owner, int ccvCode, double balance) {
@@ -12,7 +12,7 @@ public class DebitCard extends BankCards {
     @Override
     public void addMoney(double amount) {
         super.addMoney(amount);
-        tooMuch();
+        printOuttooMuch();
     }
 
     @Override
@@ -22,12 +22,13 @@ public class DebitCard extends BankCards {
     }
 
     @Override
-    public double getBalance() {
+    public BigDecimal getBalance() {
         return super.getBalance();
     }
 
-    private void tooMuch() {
-        if (getBalance() > 10000) {
+    private void printOuttooMuch() {
+        int tooMuch = getBalance().compareTo(BigDecimal.valueOf(10000));
+        if (tooMuch == 1) {
             System.out.println("\"Warning: Too much money\"");
         }
     }

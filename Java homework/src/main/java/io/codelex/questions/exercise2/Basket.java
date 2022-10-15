@@ -5,27 +5,23 @@ import java.util.List;
 
 public class Basket<T> {
 
-    T item;
-
     List<T> items = new ArrayList<>();
-
 
 
     public void addItems(T item) {
         if (items.size() == 10) {
-           throw new BasketFullException();
+            throw new BasketFullException();
         } else {
             items.add(item);
         }
     }
 
     public void removeItems(T item) {
-        if(items.isEmpty()){
+        if (items.isEmpty()) {
             throw new BasketEmptyException();
-        }else{
+        } else {
             items.remove(item);
         }
-
     }
 
     public List<T> getItems() {
