@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Basket<T> {
 
-    List<T> items = new ArrayList<>();
+    private List<T> items = new ArrayList<>();
 
 
     public void addItems(T item) {
