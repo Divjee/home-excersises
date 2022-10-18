@@ -1,4 +1,4 @@
-package io.codelex.typesandvariables.practice;
+package main.java.io.codelex.typesandvariables.practice;
 
 public class MoreVariablesAndPrinting {
     public static void main(String[] args) {

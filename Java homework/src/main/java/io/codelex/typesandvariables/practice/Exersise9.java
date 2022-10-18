@@ -1,4 +1,4 @@
-package io.codelex.typesandvariables.practice;
+package main.java.io.codelex.typesandvariables.practice;
 
 import java.util.Scanner;
 
