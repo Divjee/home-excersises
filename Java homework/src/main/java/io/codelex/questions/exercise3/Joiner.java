@@ -5,16 +5,16 @@ import java.util.Arrays;
 public class Joiner<T> {
 
 
-    String seperator;
+    String separator;
 
 
-    public Joiner(String seperator) {
+    public Joiner(String separator) {
 
-        this.seperator = seperator;
+        this.separator = separator;
     }
 
     @SafeVarargs
     public final String joinThem(T... itemOne) {
-        return Arrays.stream(itemOne).map(T::toString).reduce((a, b) -> a + seperator + b).get();
+        return Arrays.stream(itemOne).map(T::toString).reduce((a, b) -> a + separator + b).get();
     }
 }

@@ -2,7 +2,7 @@ package io.codelex.questions.exercise1;
 
 import java.math.BigDecimal;
 
-public class CreditCard extends Cards {
+public class CreditCard extends Card {
 
     public CreditCard(int number, String owner, int ccvCode, double balance) {
         super(number, owner, ccvCode, balance);
@@ -17,7 +17,7 @@ public class CreditCard extends Cards {
     @Override
     public void takeMoney(double amount) {
         super.takeMoney(amount);
-        printOutwarningLow();
+        printOutWarningLow();
     }
 
     @Override
@@ -25,9 +25,8 @@ public class CreditCard extends Cards {
         return super.getBalance();
     }
 
-    private void printOutwarningLow() {
-        int compare = getBalance().compareTo(new BigDecimal(100));
-        if (compare == -1) {
+    private void printOutWarningLow() {
+        if (getBalance().compareTo(new BigDecimal(100)) == -1) {
             System.out.println("\"Warning: Low funds\"");
         }
     }

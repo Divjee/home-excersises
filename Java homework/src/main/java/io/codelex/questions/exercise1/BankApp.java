@@ -10,5 +10,6 @@ public class BankApp {
         debitCard.addMoney(123123);
 
         creditCard.takeMoney(351);
+        creditCard.takeMoney(500);
     }
 }
